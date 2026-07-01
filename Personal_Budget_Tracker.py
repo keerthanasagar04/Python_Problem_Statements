@@ -7,14 +7,15 @@ rent_expense = float(input("What is your monthly expense on your rent?: "))
 food_expense = float(input("What is your monthly expense on your food?: "))
 travel_expense = float(input("What is your monthly expense on your travel?: "))
 
+print(f"Name: {name}")
 total_expense = rent_expense + food_expense + travel_expense
-print(f"Your monthly expense will be {total_expense}.")
+print(f"Monthly expenses: {total_expense}.")
 
-money_remaining = monthly_income - total_expense
-print(f"Your monthly savings will be {money_remaining}.")
+savings = monthly_income - total_expense
+print(f"Monthly savings: {savings}.")
 
-savings_percentage = round((money_remaining / monthly_income) * 100, 2)
-print(f"Your monthly savings percentage will be {savings_percentage}%.")
+savings_percentage = round((savings / monthly_income) * 100, 2)
+print(f"Savings percentage: {savings_percentage}%.")
 
 if savings_percentage >= 20:
     print("You are saving enough money!")
